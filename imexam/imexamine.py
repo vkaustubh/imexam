@@ -1075,7 +1075,7 @@ class Imexamine:
                 self.log.info("Sky background negative, setting to zero")
             self.log.info("Background per pixel: {0:f}".format(sky_per_pix))
 
-            flux -= sky_per_pix
+            flux = flux - float(sky_per_pix)
 
             if getdata:
                 self.log.info("Sky per pixel: {0} using "
